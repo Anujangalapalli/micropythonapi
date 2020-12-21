@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'booksapi.wsgi.application'
+WSGI_APPLICATION = 'booksapi.booksapi.wsgi.application'
 
 
 # Database
@@ -121,3 +121,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 STATIC_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_URL = '/static/'
+
+import django_on_heroku
+django_on_heroku.settings(locals())
