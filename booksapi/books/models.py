@@ -17,17 +17,17 @@ class Book(models.Model):
         return self.name
 
 
-path = '/Users/anusha/micropythonapi/bestsellers-with-categories.csv'
-with open(path) as f:
-    reader = csv.reader(f)
-    next(reader)
-    for row in reader:
-        _, created = Book.objects.get_or_create(
-            name=row[0],
-            author=row[1],
-            rating=row[2],
-            reviews=row[3],
-            price=row[4],
-            year=row[5],
-            genre=row[6]
-        )
+# path = '/Users/anusha/micropythonapi/bestsellers-with-categories.csv'
+# with open(path) as f:
+#     reader = csv.reader(f)
+#     next(reader)
+#     for row in reader:
+#         _, created = Book.objects.get_or_create(
+#             name=row[0],
+#             author=row[1],
+#             rating=row[2],
+#             reviews=row[3],
+#             price=row[4],
+#             year=row[5],
+#             genre=row[6]
+#         )
